@@ -1,17 +1,18 @@
 import './index.css'
 
 type Props = {
+    id: number;
     title: string;
     description: string;
     status: boolean;
 }
 
 const TaskListItem = (
-    {title, description, status}: Props
+    {title, description, status, id}: Props
 ) => {
     return (
         <li>
-            <h3>{title}</h3>
+            <h3>{id} - {title}</h3>
             <p>{description}</p>
             <div>
                 <label htmlFor="task-status">Task status:</label>
