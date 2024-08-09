@@ -1,4 +1,10 @@
 import "./App.css";
+import './main.css'
+
+import Header from './components/Header';
+import TaskList from "./components/TaskList";
+import TaskForm from "./components/TaskForm";
+
 
 // TODO: Create a new component called `TaskList` in the `components` folder
 // TODO: Create a new component called `TaskForm` in the `components` folder
@@ -15,10 +21,13 @@ import "./App.css";
 
 function App() {
   return (
+    <>
+    <Header />
     <div className="container">
-      <h1 className="title">trade to world task list</h1>
-      {/* Add components here... */}
+      <TaskForm />
+      <TaskList />
     </div>
+    </>
   );
 }
 

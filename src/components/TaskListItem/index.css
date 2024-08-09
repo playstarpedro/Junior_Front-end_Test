@@ -1,0 +1,31 @@
+li {
+    background-color: #FFFBDA;
+    padding: 20px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+}
+
+li h3 {
+    color: #ED9455;
+    margin-bottom: 8px;;
+}
+
+li p {
+    margin-bottom: 8px;
+}
+
+li button {
+    background-color: #ED9455;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+li div {
+    display: flex;
+    align-items: center;
+}
+
+li div label {
+    margin-right: 10px;;
+}
