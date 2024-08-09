@@ -4,9 +4,7 @@ const TaskList = () => {
     return (
     <div>
         <ul>
-            <TaskListItem />
-            <TaskListItem />
-            <TaskListItem />
+            <TaskListItem title='tst' description='tst' status={false}/>
         </ul>
     </div>
     )
