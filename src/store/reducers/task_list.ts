@@ -10,7 +10,7 @@ const initialState: taskList = {
             id: 1,
             title: 'test title',
             description: 'test description',
-            status: false,
+            status: true,
         }
     ]
 }

@@ -24,10 +24,10 @@ export const TaskStatus = styled.div`
     }
 
     .completed {
-    color: green;
+    color: ${variables.grren};
     }
 
     .pending {
-    color: red;
+    color: ${variables.red};
     }
 `

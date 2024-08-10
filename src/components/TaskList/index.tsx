@@ -1,7 +1,7 @@
 import { RootReducer } from '../../store';
-import TaskListItem from '../TaskListItem';
-
 import { useSelector } from 'react-redux';
+
+import TaskListItem from '../TaskListItem';
 
 const TaskList = () => {
     const { tasks } = useSelector((state: RootReducer) => state.taskList)

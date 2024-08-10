@@ -26,6 +26,11 @@ export const ListItem = styled.li`
 export const ListItemFooter = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    label {
+        margin-right: 10px;
+    }
 `
 
 export const ListItemButton = styled(Button)`
