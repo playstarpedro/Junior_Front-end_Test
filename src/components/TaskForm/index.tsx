@@ -1,12 +1,10 @@
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { add } from '../../store/reducers/task_list'
 
 import './index.css'
-import { add } from '../../store/reducers/task_list'
-import { useState } from 'react';
 
 const TaskForm = () => {
-
-
     const dispatch = useDispatch();
 
     const addNewTask = (task: Task) => {

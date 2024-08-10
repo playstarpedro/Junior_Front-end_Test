@@ -27,7 +27,7 @@ const taskListSlice = createSlice({
             )
 
             if (taskAlreadyExists) {
-                alert(`Task "${action.payload.title}" already exists!`)
+                alert(`Task "${action.payload.title}" already exists!`);
             } else {
                 // Dynamic id logic
                 const lastTask = state.tasks[state.tasks.length - 1];
@@ -37,10 +37,15 @@ const taskListSlice = createSlice({
                 }
                 state.tasks.push(newTask);
             } 
+        },
+        remove: (state, action: PayloadAction<number>) => {
+            state.tasks = [
+                ...state.tasks.filter((task) => task.id !== action.payload)
+            ]
         }
     }
 })
 
-export const { add } = taskListSlice.actions; 
+export const { add, remove } = taskListSlice.actions; 
 
 export default taskListSlice.reducer;
