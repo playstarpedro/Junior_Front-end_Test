@@ -25,7 +25,7 @@ const TaskForm = () => {
                     <label htmlFor="task-description">Task description:</label>
                     <input value={undefined} type="text" id="task-description" onChange={(e) => setNewTaskDescription(e.target.value)} required/>
                 </S.FormInputArea>
-                <Button disabled = {newTaskDescription == '' || newTaskDescription == ''} type='button' onClick={() => addNewTask({id: 1, title: newTaskTitle, description: newTaskDescription, status: false})}> 
+                <Button disabled = {newTaskTitle == '' || newTaskDescription == ''} type='button' onClick={() => addNewTask({id: 1, title: newTaskTitle, description: newTaskDescription, status: false})}> 
                     <b>Add new task</b>
                 </Button>
             </S.TaskForm>
