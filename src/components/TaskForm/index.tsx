@@ -2,7 +2,8 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { add } from '../../store/reducers/task_list'
 
-import './index.css'
+import * as S from './styles'
+import { Button } from '../../styles';
 
 const TaskForm = () => {
     const dispatch = useDispatch();
@@ -15,21 +16,19 @@ const TaskForm = () => {
     const [newTaskDescription, setNewTaskDescription] = useState('');
 
     return (
-        <div className='task-form'>
-            <form >
-                <div>
+            <S.TaskForm >
+                <S.FormInputArea>
                     <label htmlFor="task-title">Task title:</label>
                     <input value={undefined} type="text" id="task-title" onChange={(e) => setNewTaskTitle(e.target.value)} required/>
-                </div>
-                <div>
+                </S.FormInputArea>
+                <S.FormInputArea>
                     <label htmlFor="task-description">Task description:</label>
                     <input value={undefined} type="text" id="task-description" onChange={(e) => setNewTaskDescription(e.target.value)} required/>
-                </div>
-                <button disabled = {newTaskDescription == '' || newTaskDescription == ''} type='button' onClick={() => addNewTask({id: 1, title: newTaskTitle, description: newTaskDescription, status: false})}> 
+                </S.FormInputArea>
+                <Button disabled = {newTaskDescription == '' || newTaskDescription == ''} type='button' onClick={() => addNewTask({id: 1, title: newTaskTitle, description: newTaskDescription, status: false})}> 
                     <b>Add new task</b>
-                </button>
-            </form>
-        </div>
+                </Button>
+            </S.TaskForm>
     )
 }
 

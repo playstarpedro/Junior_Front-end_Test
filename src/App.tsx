@@ -1,10 +1,7 @@
-import "./App.css";
-import './main.css'
-
 import Header from './components/Header';
 import TaskList from "./components/TaskList";
 import TaskForm from "./components/TaskForm";
-
+import GlobalStyle, { Container } from "./styles";
 
 // TODO: Create a new component called `TaskList` in the `components` folder
 // TODO: Create a new component called `TaskForm` in the `components` folder
@@ -22,11 +19,12 @@ import TaskForm from "./components/TaskForm";
 function App() {
   return (
     <>
+    <GlobalStyle />
     <Header />
-    <div className="container">
+    <Container>
       <TaskForm />
       <TaskList />
-    </div>
+    </Container>
     </>
   );
 }

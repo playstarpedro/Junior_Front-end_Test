@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { remove } from '../../store/reducers/task_list'
 
-import './index.css'
+import * as S from './styles'
 
 type Props = {
     id: number;
@@ -21,17 +21,17 @@ const TaskListItem = (
     }
 
     return (
-        <li>
+        <S.ListItem>
             <h3>{id} - {title}</h3>
             <p>{description}</p>
-            <div className='task-footer'>
+            <S.ListItemFooter>
                 <div>
                     <label htmlFor="task-status">Task status:</label>
                     <input  type="checkbox" id='task-status' checked={status} />
                 </div>
-                <button type='submit' onClick={() => removeTask(id)}><b>Remove task</b></button>
-            </div>
-        </li>
+                <S.ListItemButton type='submit' onClick={() => removeTask(id)}><b>Remove task</b></S.ListItemButton>
+            </S.ListItemFooter>
+        </S.ListItem>
     )
 }
 
