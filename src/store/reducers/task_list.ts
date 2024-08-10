@@ -20,7 +20,7 @@ const taskListSlice = createSlice({
     initialState,
     reducers: {
         add: (state, action: PayloadAction<Task>) => {
-            // Non-repeating task logic
+            // Non-repeating task logic  
             const taskAlreadyExists = state.tasks.find(
                 (task) =>
                     task.title.toLowerCase() === action.payload.title.toLowerCase()
