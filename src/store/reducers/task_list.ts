@@ -46,7 +46,6 @@ const taskListSlice = createSlice({
         changeStatus: (state, action: PayloadAction<number>) => {
             const taskId = action.payload;
             const taskToUpdate = state.tasks.find((task) => task.id === taskId);
-            alert(taskToUpdate?.description)
 
             if (taskToUpdate !== undefined) {
                 taskToUpdate.status = !taskToUpdate.status;

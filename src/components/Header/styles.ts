@@ -24,7 +24,7 @@ export const TaskStatus = styled.div`
     }
 
     .completed {
-    color: ${variables.grren};
+    color: ${variables.green};
     }
 
     .pending {

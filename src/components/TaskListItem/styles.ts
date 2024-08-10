@@ -39,26 +39,31 @@ export const ListItemFooter = styled.div`
 
 export const TaskStatusContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
     border-radius: 10px;
-    padding: 8px;
+    padding: 6px;
+    color: #fff;
 
     input {
         margin-left: 10px;
+        background-color: ${variables.green};
+        color: ${variables.green};
+        background-color: ${variables.green};
     }
 
     &.completed {
-        background-color: ${variables.green};
+        color: ${variables.green};
     }
     
     &.pending {
-        background-color: ${variables.lightRed};
+        color: ${variables.lightRed};
     }
 `
 
 export const ListItemButton = styled(Button)`
     background-color: ${variables.red};
+    margin-left: 10px;
 
     &:hover {
         background-color: ${variables.lightRed};

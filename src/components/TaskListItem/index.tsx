@@ -29,16 +29,16 @@ const TaskListItem = (
             <S.TaskTitle className={status ? 'completed' : ''}>{id} - {title}</S.TaskTitle>
             <S.TaskDescription>{description}</S.TaskDescription>
             <S.ListItemFooter>
+                <S.TaskStatusContainer className={status ? 'completed' : 'pending'}>
+                    <p>Task status:</p>
+                    <input  type="checkbox" id='task-status' checked={status} />
+                </S.TaskStatusContainer>
                 <div>
-                    <S.TaskStatusContainer className={status ? 'completed' : 'pending'}>
-                        <p>Task status:</p>
-                        <input  type="checkbox" id='task-status' checked={status} />
-                    </S.TaskStatusContainer>
                     <S.changeStatusButton className={status ? 'completed' : 'pending'} type='button' onClick={() => changeTaskStatus(id)}>
                         {status ? ('Mark as pending') : ('Mark as completed')}
                     </S.changeStatusButton>
+                    <S.ListItemButton type='submit' onClick={() => removeTask(id)}><b>Remove task</b></S.ListItemButton>
                 </div>
-                <S.ListItemButton type='submit' onClick={() => removeTask(id)}><b>Remove task</b></S.ListItemButton>
             </S.ListItemFooter>
         </S.ListItem>
     )

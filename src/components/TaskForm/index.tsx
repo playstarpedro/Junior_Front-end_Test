@@ -16,19 +16,23 @@ const TaskForm = () => {
     const [newTaskDescription, setNewTaskDescription] = useState('');
 
     return (
+        <>
             <S.TaskForm >
-                <S.FormInputArea>
+                <S.TaskTitleForm>
                     <label htmlFor="task-title">Task title:</label>
-                    <input value={undefined} type="text" id="task-title" onChange={(e) => setNewTaskTitle(e.target.value)} required/>
-                </S.FormInputArea>
-                <S.FormInputArea>
+                    <input className={newTaskTitle == '' ? 'invalid' : ''} type="text" id="task-title" onChange={(e) => setNewTaskTitle(e.target.value)} required/>
+                </S.TaskTitleForm>
+                <S.TaskDescriptionForm>
                     <label htmlFor="task-description">Task description:</label>
-                    <input value={undefined} type="text" id="task-description" onChange={(e) => setNewTaskDescription(e.target.value)} required/>
-                </S.FormInputArea>
-                <Button disabled = {newTaskTitle == '' || newTaskDescription == ''} type='button' onClick={() => addNewTask({id: 1, title: newTaskTitle, description: newTaskDescription, status: false})}> 
-                    <b>Add new task</b>
-                </Button>
+                    <input className={newTaskTitle == '' ? 'invalid' : ''} type="text" id="task-description" onChange={(e) => setNewTaskDescription(e.target.value)} required/>
+                </S.TaskDescriptionForm>
+                <S.FormButton>
+                    <Button disabled = {newTaskTitle == '' || newTaskDescription == ''} type='button' onClick={() => addNewTask({id: 1, title: newTaskTitle, description: newTaskDescription, status: false})}> 
+                        <b>Add new task</b>
+                    </Button>
+                </S.FormButton>
             </S.TaskForm>
+        </>
     )
 }
 

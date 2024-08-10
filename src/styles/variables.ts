@@ -5,5 +5,5 @@ export default {
     lightYellow: '#FFFBDA',
     red: '#973131',
     lightRed: '#B24B4B',
-    green: '#9FBB73',
+    green: '#387F39',
 }
